@@ -7,9 +7,11 @@ socket.on('disconnect', function() {
     console.log('Disconnected from server.');
 });
 
-grecaptcha.ready(function() {
-    grecaptcha.execute('6LeDcZAUAAAAAOUEBMCnn5Dhm0qw9sgPbd9eUueV', {action: 'homepage'});
-});
+var onloadCallback = function() {
+        grecaptcha.render('html_element', {
+          'sitekey' : '6LchdJAUAAAAALvHEbglXqtwrj_qsLkwimKtjQXK'
+        });
+      };
 
 $("#contactForm").submit(function(e) {
     e.preventDefault();
@@ -39,6 +41,6 @@ $("#contactForm").submit(function(e) {
     };
 }); 
 
-function verifyCaptcha() {
-    document.getElementById('g-recaptcha-error').innerHTML = '';
-};
+//function verifyCaptcha() {
+//    document.getElementById('g-recaptcha-error').innerHTML = '';
+//};
