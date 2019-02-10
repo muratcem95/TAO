@@ -41,7 +41,7 @@ app.get('/home', (req, res) => {
 app.post('/contactForm', (req, res) => {
     var mailOptions = {
         from: 'muratcem95@gmail.com',
-        to: 'ashu.network.01@gmail.com',
+        to: 'muratcem95@gmail.com',
         subject: `TAO Finding Your Way: Name: ${req.body.name}`,
         text: `Email: ${req.body.email}, Phone: ${req.body.phone}, Message: ${req.body.message}`
     };
