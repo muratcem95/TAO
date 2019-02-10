@@ -7,6 +7,7 @@ const socketIO = require('socket.io');
 const moment = require('moment');
 const _ = require('lodash');
 const nodemailer = require('nodemailer');
+var hbs = require('hbs');
 
 const viewsPath = path.join(__dirname, '../views');
 const port = process.env.PORT || 3000;
