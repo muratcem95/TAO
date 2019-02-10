@@ -53,6 +53,8 @@ app.post('/contactForm', (req, res) => {
             console.log('Email sent: ' + info.response);
         };
     });
+    
+    res.redirect('/home');
 });
 
 //IO CONNECTIONS
@@ -64,4 +66,3 @@ io.on('connection', (socket) => {
 });
     
 server.listen(port, () => console.log(`Server is up on port ${port}`));
-

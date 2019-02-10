@@ -7,11 +7,9 @@ socket.on('disconnect', function() {
     console.log('Disconnected from server.');
 });
 
-function verifyCaptcha() {
-    document.getElementById('g-recaptcha-error').innerHTML = '';
-};
-
 $("#contactForm").submit(function(e) {
+    e.preventDefault();
+    
     var name = $("#name").val();
     var email = $("#email").val();
     var phone = $("#phone").val();
@@ -21,7 +19,7 @@ $("#contactForm").submit(function(e) {
     if(!recap) {
         var response = grecaptcha.getResponse();
         if(response.length == 0) {
-            document.getElementById('g-recaptcha-error').innerHTML = '<div>This field is required.</div>';
+            $("#alert").html('<div class="alert alert-danger text-center alert-dismissible fade show" role="alert"><div id="space"></div><p>Recaptcha is required!</p></div>');
         return false;
         };
     };
@@ -36,3 +34,7 @@ $("#contactForm").submit(function(e) {
         return false;
     };
 }); 
+
+function verifyCaptcha() {
+    document.getElementById('g-recaptcha-error').innerHTML = '';
+};
