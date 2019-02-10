@@ -7,6 +7,10 @@ socket.on('disconnect', function() {
     console.log('Disconnected from server.');
 });
 
+grecaptcha.ready(function() {
+    grecaptcha.execute('6LeDcZAUAAAAAOUEBMCnn5Dhm0qw9sgPbd9eUueV', {action: 'homepage'});
+});
+
 $("#contactForm").submit(function(e) {
     e.preventDefault();
     
