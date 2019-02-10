@@ -23,7 +23,3 @@ $("#contactForm").submit(function(e) {
         };
     };
 }); 
-
-//function verifyCaptcha() {
-//    document.getElementById('g-recaptcha-error').innerHTML = '';
-//};
