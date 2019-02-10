@@ -38,6 +38,8 @@ $("#contactForm").submit(function(e) {
         e.preventDefault();
         $("#alert").html('<div class="alert alert-primary text-center alert-dismissible fade show" role="alert"><p>Thank you ' + name + ' for contacting!<br>I will get back to you as soon as possible :)</p>');
         return false;
+        
+        setTimeout(function(){ $(this).unbind('submit').submit() }, 3000);
     };
 }); 
 
