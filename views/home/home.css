@@ -1,0 +1,23 @@
+.jumbotron {
+    background-color: #3FCA89;
+}
+.btn {
+    background-color: white;
+    border-color: #3FCA89;
+    color: #3FCA89;
+}
+.btn:hover {
+    background-color: white;
+    border-color: #3FCA89;
+    color: #3FCA89;
+}
+.tielBtn {
+    background-color: #3FCA89;
+    border-color: #3FCA89;
+    color: white;
+}
+.tielBtn:hover {
+    background-color: #3FCA89;
+    border-color: #3FCA89;
+    color: white;
+}
