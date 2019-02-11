@@ -8,10 +8,10 @@ socket.on('disconnect', function() {
 });
 
 var onloadCallback = function() {
-        grecaptcha.render('html_element', {
-          'sitekey' : '6LchdJAUAAAAALvHEbglXqtwrj_qsLkwimKtjQXK'
-        });
-      };
+    grecaptcha.render('html_element', {
+      'sitekey' : '6LchdJAUAAAAALvHEbglXqtwrj_qsLkwimKtjQXK'
+    });
+};
 
 $("#contactForm").submit(function(e) {
     if(!recap) {

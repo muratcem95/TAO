@@ -6,6 +6,14 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-134263333-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-134263333-1');
+        </script>
         
         <link rel="stylesheet" href="home.css">
 
@@ -71,20 +79,19 @@
                          <form id="contactForm" method="post" action="/contactForm">
                              <div id="alert"></div>
                              <div class="form-group">
-                                 <input type="text" class="form-control" id="name" name="name" placeholder="Your name">
+                                 <input type="text" class="form-control" id="name" name="name" placeholder="Your name" required>
                              </div>
                              <div class="form-group">
-                                 <input type="email" class="form-control" id="email" name="email" placeholder="Enter email">
+                                 <input type="email" class="form-control" id="email" name="email" placeholder="Enter email" required>
                                  <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
                              </div>
                              <div class="form-group">
-                                 <input type="number" class="form-control" id="phone" name="phone" placeholder="Phone number">
+                                 <input type="number" class="form-control" id="phone" name="phone" placeholder="Phone number" required>
                              </div>
                              <div class="form-group">
-                                 <textarea rows="5" class="form-control" id="message" name="message" placeholder="Message you would like to share with me"></textarea>
+                                 <textarea rows="5" class="form-control" id="message" name="message" placeholder="Message you would like to share with me" required></textarea>
                              </div>
                              <div id="recap" name="recap" class="g-recaptcha" data-sitekey="6LchdJAUAAAAALvHEbglXqtwrj_qsLkwimKtjQXK" data-callback="verifyCaptcha"></div>
-                             <div id="g-recaptcha-error"></div>
                              <div class="text-center"><button id="contactFormSubmit" type="submit" class="btn tielBtn">Send</button></div>
                         </form>
                     </div>
@@ -97,7 +104,6 @@
         
         
        
-        
         
         
         
