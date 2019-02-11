@@ -14,12 +14,14 @@ var onloadCallback = function() {
 };
 
 $("#contactForm").submit(function(e) {
+    e.preventDefault();
+    
     if(!recap) {
-        e.preventDefault();
         var response = grecaptcha.getResponse();
         if(response.length == 0) {
-            $("#alert").html('<div class="alert alert-danger text-center alert-dismissible fade show" role="alert"><div id="space"></div><p>Recaptcha is required!</p></div>');
-        return false;
+            $("#alert").html('<div class="alert alert-danger text-center alert-dismissible fade show" role="alert">Recaptcha is required!</div>');
         };
+    } else {
+        $(this).unbind('submit').submit()
     };
 }); 
