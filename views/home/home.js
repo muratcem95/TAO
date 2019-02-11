@@ -13,7 +13,7 @@ var onloadCallback = function() {
     });
 };
 
-$("#contactForm").submit(function(e) {
+$("#contactFormSubmit").submit(function(e) {
     e.preventDefault();
     
     if(!recap) {
