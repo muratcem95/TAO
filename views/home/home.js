@@ -14,11 +14,11 @@ socket.on('disconnect', function() {
 //};
 
 $("#contactForm").submit(function() {
+    var recap = $("#recap").val();
     if(!recap) {
         var response = grecaptcha.getResponse();
         if(response.length == 0) {
-//            $("#alert").html('<div class="alert alert-danger text-center alert-dismissible fade show" role="alert">Recaptcha is required!</div>');
-            document.getElementById('g-recaptcha-error').innerHTML = 'Fill this sucker';
+            $("#alert").html('<div class="alert alert-danger text-center alert-dismissible fade show" role="alert">Recaptcha is required!</div>');
             return false;
         };
     } else {
@@ -26,6 +26,6 @@ $("#contactForm").submit(function() {
     };
 }); 
 
-function verifyCaptcha() {
-    document.getElementById('g-recaptcha-error').innerHTML = '';
-};
+//function verifyCaptcha() {
+//    document.getElementById('g-recaptcha-error').innerHTML = '';
+//};
