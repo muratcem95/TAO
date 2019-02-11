@@ -17,13 +17,13 @@ function verifyCaptcha() {
     document.getElementById('g-recaptcha-error').innerHTML = '';
 };
 
-$("#contactForm").submit(function(e) {
-    e.preventDefault();
+$("#contactForm").submit(function() {
     
     if(!recap) {
         var response = grecaptcha.getResponse();
         if(response.length == 0) {
             $("#alert").html('<div class="alert alert-danger text-center alert-dismissible fade show" role="alert">Recaptcha is required!</div>');
+            return false;
         };
     } else {
         $(this).unbind('submit').submit()
