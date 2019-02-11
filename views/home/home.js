@@ -7,18 +7,13 @@ socket.on('disconnect', function() {
     console.log('Disconnected from server.');
 });
 
-var onloadCallback = function() {
-    grecaptcha.render('html_element', {
-      'sitekey' : '6LchdJAUAAAAALvHEbglXqtwrj_qsLkwimKtjQXK'
-    });
-};
-
-function verifyCaptcha() {
-    document.getElementById('g-recaptcha-error').innerHTML = '';
-};
+//var onloadCallback = function() {
+//    grecaptcha.render('html_element', {
+//      'sitekey' : '6LchdJAUAAAAALvHEbglXqtwrj_qsLkwimKtjQXK'
+//    });
+//};
 
 $("#contactForm").submit(function() {
-    
     if(!recap) {
         var response = grecaptcha.getResponse();
         if(response.length == 0) {
@@ -30,3 +25,7 @@ $("#contactForm").submit(function() {
         $(this).unbind('submit').submit()
     };
 }); 
+
+function verifyCaptcha() {
+    document.getElementById('g-recaptcha-error').innerHTML = '';
+};
