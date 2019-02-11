@@ -13,7 +13,11 @@ var onloadCallback = function() {
     });
 };
 
-$("#contactFormSubmit").submit(function(e) {
+function verifyCaptcha() {
+    document.getElementById('g-recaptcha-error').innerHTML = '';
+};
+
+$("#contactForm").submit(function(e) {
     e.preventDefault();
     
     if(!recap) {
